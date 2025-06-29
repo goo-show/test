@@ -1,62 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Leave a Private Message</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khaled Family Support</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
+      background: #f4f4f4;
+      margin: 0;
       padding: 20px;
       text-align: center;
+      color: #333;
+    }
+    h1 {
+      color: #136c3b;
+    }
+    .donate-button {
+      background-color: #02a95c;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+      margin: 10px;
+      font-size: 16px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 15px 0;
     }
     form {
+      max-width: 500px;
+      margin: 30px auto;
       background: #fff;
       padding: 20px;
-      margin: auto;
-      max-width: 400px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     input, textarea {
       width: 100%;
-      padding: 10px;
-      margin: 10px 0;
+      padding: 8px;
+      margin: 8px 0;
+      border-radius: 4px;
       border: 1px solid #ccc;
-      border-radius: 6px;
       font-size: 14px;
     }
     button {
       background-color: #02a95c;
-      color: white;
-      padding: 10px 20px;
+      color: #fff;
+      padding: 10px 15px;
       border: none;
       border-radius: 6px;
+      font-size: 14px;
       cursor: pointer;
-      font-size: 16px;
+    }
+    .comment-list {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: 20px;
+      text-align: left;
+      font-size: 13px;
+      color: #444;
+    }
+    .comment {
+      background: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-left: 3px solid #02a95c;
+      border-radius: 5px;
     }
     .note {
-      font-size: 13px;
+      font-size: 12px;
       color: #888;
-      margin-top: -10px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
 
-  <h2>Send a Private Message</h2>
+  <h1>Help Khaled Reunite with His Family</h1>
+  <a class="donate-button" href="https://gofund.me/321e3212" target="_blank">Donate on GoFundMe</a>
+  <a class="donate-button" href="https://spot.fund/khaled" target="_blank">Donate on Spotfund</a>
 
-  <p class="note">
-    ملاحظة: لن يظهر تعليقك في الصفحة، سيتم إرساله مباشرة إلى بريدي الخاص 📩<br>
-    <em>Note: Your message will NOT appear publicly. It will go directly to my email.</em>
+  <img src="https://i.ibb.co/3yVFdWB6/1d20f667-d2db-4caf-b466-1a91617dff8b.jpg" alt="Khaled and family" />
+
+  <p>
+    Daily pressures are increasing, and the hope of reunion is fading because of destruction and loss.<br>
+    We say goodbye to many loved ones. Bombing and starvation continue daily.<br>
+    If one survives the bombs, they die from hunger. I don't know if I will see my children and wife again.<br>
+    This suffering is beyond imagination.
   </p>
 
-  <form action="https://formspree.io/f/mkgbywed" method="POST">
-    <input type="text" name="name" placeholder="Your name / اسمك" required>
-    <textarea name="message" placeholder="Write your message here... / اكتب رسالتك هنا" rows="5" required></textarea>
-    <button type="submit">Send Message / أرسل الرسالة</button>
+  <img src="https://i.ibb.co/3Y1f4Pj6/ebbbc2d8-1a12-412b-81ab-adecf73be6b4.jpg" alt="Gaza destruction" />
+
+  <a class="donate-button" href="https://gofund.me/321e3212" target="_blank">Donate on GoFundMe</a>
+  <a class="donate-button" href="https://spot.fund/khaled" target="_blank">Donate on Spotfund</a>
+
+  <form id="commentForm">
+    <div class="note">Your comment will appear below publicly.</div>
+    <input type="text" id="name" placeholder="Your name" required />
+    <textarea id="message" placeholder="Your message" rows="4" required></textarea>
+    <button type="submit">Send Comment</button>
   </form>
+
+  <div class="comment-list" id="commentList"></div>
+
+  <script>
+    document.getElementById('commentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (name && message) {
+        const commentBox = document.createElement('div');
+        commentBox.className = 'comment';
+        commentBox.innerHTML = `<strong>${name}</strong>:<br>${message}`;
+        document.getElementById('commentList').prepend(commentBox);
+        document.getElementById('commentForm').reset();
+      }
+    });
+  </script>
+
+  <p class="note">Contact me via WhatsApp: <a href="https://wa.me/972597101194" target="_blank">+972597101194</a></p>
 
 </body>
 </html>
