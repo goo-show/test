@@ -1,85 +1,100 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>نموذج تعليقات باسم المستخدم فقط</title>
-<style>
-  body { font-family: Arial, sans-serif; direction: rtl; padding: 20px; background: #f9f9f9; }
-  form { background: #fff; padding: 15px; border-radius: 6px; max-width: 500px; margin-bottom: 30px; box-shadow: 0 0 10px #ccc; }
-  label { font-weight: bold; margin-top: 10px; display: block; }
-  input[type="text"], textarea { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-  button { margin-top: 15px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
-  button:hover { background-color: #0056b3; }
-  .comments-container { max-width: 500px; background: white; padding: 15px; border-radius: 6px; box-shadow: 0 0 10px #ccc; }
-  .comment { border-bottom: 1px solid #ddd; padding: 10px 0; }
-  .comment:last-child { border-bottom: none; }
-  .comment-username { font-weight: bold; color: #007bff; }
-  .comment-text { margin: 5px 0 0 0; }
-</style>
+  <meta charset="UTF-8">
+  <title>Help Khaled Reunite with His Family</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      background-color: #f9f9f9;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      color: #b30000;
+    }
+
+    a.button {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 15px;
+      background-color: #b30000;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .section {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-box {
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      max-width: 400px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #b30000;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #990000;
+    }
+  </style>
 </head>
 <body>
 
-<h2>اترك تعليقك</h2>
-<form id="commentForm">
-  <label for="username">اسم المستخدم:</label>
-  <input type="text" id="username" name="username" required placeholder="ادخل اسم المستخدم">
+  <h1>Help Khaled Reunite with His Family</h1>
 
-  <label for="comment">تعليقك:</label>
-  <textarea id="comment" name="comment" rows="4" required placeholder="اكتب تعليقك هنا"></textarea>
+  <a class="button" href="https://gofund.me/321e3212" target="_blank">Donate on GoFundMe</a>
+  <a class="button" href="https://spot.fund/khaled" target="_blank">Donate on Spotfund</a>
 
-  <button type="submit">إرسال التعليق</button>
-</form>
-
-<div class="comments-container" id="commentsContainer">
-  <h3>التعليقات</h3>
-  <div id="commentsList">
-    <p>لا توجد تعليقات بعد.</p>
+  <div class="section">
+    <p>Daily pressures are increasing, and the hope of reunion is fading because of the destruction and loss we face every day.</p>
+    <p>We say goodbye to many loved ones. Bombing and killing continue under daily genocide and starvation.</p>
+    <p>If one survives the bombs, they die from hunger. I don't know if I will see my children and wife again.</p>
+    <p>And even if I do… how will that reunion be? No one can truly feel our pain. It is suffering beyond imagination.</p>
   </div>
-</div>
 
-<script>
-  const commentForm = document.getElementById('commentForm');
-  const commentsList = document.getElementById('commentsList');
+  <div class="section">
+    <h2>Devastation in Gaza</h2>
+    <a class="button" href="https://gofund.me/321e3212" target="_blank">Donate on GoFundMe</a>
+    <a class="button" href="https://spot.fund/khaled" target="_blank">Donate on Spotfund</a>
+  </div>
 
-  commentForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+  <div class="section">
+    <p>Contact me on WhatsApp: <a href="https://wa.me/972597101194" target="_blank">00972597101194</a></p>
+  </div>
 
-    const username = document.getElementById('username').value.trim();
-    const comment = document.getElementById('comment').value.trim();
+  <div class="section form-box">
+    <h3>اترك تعليقك</h3>
+    <form action="https://formspree.io/f/mkgbywed" method="POST">
+      <label for="username">اسمك:</label>
+      <input type="text" id="username" name="username" required placeholder="ادخل اسمك">
 
-    if (!username || !comment) {
-      alert('يرجى إدخال اسم المستخدم والتعليق');
-      return;
-    }
+      <label for="message">تعليقك:</label>
+      <textarea id="message" name="message" rows="4" required placeholder="اكتب تعليقك هنا"></textarea>
 
-    // إزالة رسالة "لا توجد تعليقات" إذا كانت موجودة
-    if (commentsList.children.length === 1 && commentsList.children[0].tagName === 'P') {
-      commentsList.innerHTML = '';
-    }
-
-    // إنشاء عنصر تعليق جديد
-    const commentDiv = document.createElement('div');
-    commentDiv.className = 'comment';
-
-    const userSpan = document.createElement('span');
-    userSpan.className = 'comment-username';
-    userSpan.textContent = username;
-
-    const textP = document.createElement('p');
-    textP.className = 'comment-text';
-    textP.textContent = comment;
-
-    commentDiv.appendChild(userSpan);
-    commentDiv.appendChild(textP);
-
-    // إضافة التعليق لقائمة التعليقات
-    commentsList.appendChild(commentDiv);
-
-    // إعادة تعيين النموذج
-    commentForm.reset();
-  });
-</script>
+      <button type="submit">إرسال التعليق</button>
+    </form>
+  </div>
 
 </body>
 </html>
