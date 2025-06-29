@@ -2,13 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Khaled Family Support</title>
-  <meta name="description" content="هذا من فضل ربي">
-  <meta property="og:title" content="Help Khaled Reunite with His Family" />
+
+  <!-- Meta tags for social sharing -->
+  <meta name="description" content="هذا من فضل ربي" />
+  <meta property="og:title" content="هذا من فضل ربي" />
   <meta property="og:description" content="هذا من فضل ربي" />
   <meta property="og:image" content="https://i.ibb.co/3yVFdWB6/1d20f667-d2db-4caf-b466-1a91617dff8b.jpg" />
   <meta property="og:url" content="https://goo-show.github.io/all/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="هذا من فضل ربي" />
+  <meta name="twitter:description" content="هذا من فضل ربي" />
+  <meta name="twitter:image" content="https://i.ibb.co/3yVFdWB6/1d20f667-d2db-4caf-b466-1a91617dff8b.jpg" />
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -50,7 +57,7 @@
       margin: 8px 0;
       border-radius: 4px;
       border: 1px solid #ccc;
-      font-size: 14px;
+      font-size: 13px;
     }
     button {
       background-color: #02a95c;
@@ -118,10 +125,10 @@
   <a class="donate-button" href="https://spot.fund/khaled" target="_blank">Donate on Spotfund</a>
 
   <form id="commentForm">
-    <div class="note">💌 Send a message of hope and love to Khaled and his family.</div>
+    <div class="note">💌 Send a message of hope or love to Khaled. Your message will not be public.</div>
     <input type="text" id="name" placeholder="Your name" required />
     <textarea id="message" placeholder="Your message" rows="4" required></textarea>
-    <button type="submit">💌 Send a message of hope</button>
+    <button type="submit">💌 Send your message</button>
   </form>
 
   <div class="comment-list" id="commentList"></div>
@@ -139,10 +146,7 @@
       const message = document.getElementById('message').value.trim();
 
       if (name && message) {
-        const commentBox = document.createElement('div');
-        commentBox.className = 'comment';
-        commentBox.innerHTML = `<strong>${name}</strong>:<br>${message}`;
-        document.getElementById('commentList').prepend(commentBox);
+        alert("Thank you! Your message has been received.");
         document.getElementById('commentForm').reset();
       }
     });
