@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Khaled Family Support</title>
 
-  <!-- Meta tags for social sharing without image -->
+  <!-- Meta tags for social sharing with no image -->
   <meta name="description" content="هذا من فضل ربي" />
   <meta property="og:title" content="هذا من فضل ربي" />
   <meta property="og:description" content="هذا من فضل ربي" />
@@ -108,7 +108,7 @@
   <a class="donate-button" href="https://gofund.me/321e3212" target="_blank">Donate on GoFundMe</a>
   <a class="donate-button" href="https://spot.fund/khaled" target="_blank">Donate on Spotfund</a>
 
-  <img src="https://i.ibb.co/3yVFdWB6/1d20f667-d2db-4caf-b466-1a91617dff8b.jpg" alt="Khaled and family" />
+  <img data-src="https://i.ibb.co/3yVFdWB6/1d20f667-d2db-4caf-b466-1a91617dff8b.jpg" alt="Khaled and family" id="img1" />
 
   <p>
     Daily pressures are increasing, and the hope of reunion is fading because of destruction and loss.<br>
@@ -117,7 +117,7 @@
     This suffering is beyond imagination.
   </p>
 
-  <img src="https://i.ibb.co/3Y1f4Pj6/ebbbc2d8-1a12-412b-81ab-adecf73be6b4.jpg" alt="Gaza destruction" />
+  <img data-src="https://i.ibb.co/3Y1f4Pj6/ebbbc2d8-1a12-412b-81ab-adecf73be6b4.jpg" alt="Gaza destruction" id="img2" />
 
   <a class="donate-button" href="https://gofund.me/321e3212" target="_blank">Donate on GoFundMe</a>
   <a class="donate-button" href="https://spot.fund/khaled" target="_blank">Donate on Spotfund</a>
@@ -129,8 +129,6 @@
     <button type="submit">💌 Send your message</button>
   </form>
 
-  <div class="comment-list" id="commentList"></div>
-
   <div class="whatsapp">
     <a href="https://wa.me/972597101194" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">00972597101194
@@ -138,6 +136,15 @@
   </div>
 
   <script>
+    // تأخير تحميل الصور لمنع ظهورها في معاينة الرابط
+    window.addEventListener('DOMContentLoaded', () => {
+      const img1 = document.getElementById('img1');
+      const img2 = document.getElementById('img2');
+      if (img1) img1.setAttribute('src', img1.getAttribute('data-src'));
+      if (img2) img2.setAttribute('src', img2.getAttribute('data-src'));
+    });
+
+    // التعامل مع نموذج الرسائل
     document.getElementById('commentForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
