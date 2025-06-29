@@ -1,190 +1,62 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Help Khaled Reunite with His Family</title>
+  <meta charset="UTF-8">
+  <title>Leave a Private Message</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(#f2f2f2, #d9e4ec);
-      margin: 0;
-      padding: 20px;
+      background: #f9f9f9;
       color: #333;
+      padding: 20px;
       text-align: center;
     }
-    header, section, footer {
-      margin-bottom: 20px;
-    }
-    .donate-button {
-      background-color: #02a95c;
-      color: white;
-      padding: 15px 25px;
-      text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
-      margin: 15px 10px;
-      font-size: 18px;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin: 10px 0;
-    }
-    .whatsapp {
-      margin-top: 20px;
-      font-size: 16px;
-    }
-    .whatsapp a {
-      color: #25D366;
-      font-weight: bold;
-      text-decoration: none;
-    }
     form {
-      max-width: 400px;
-      margin: 0 auto 30px;
-      background: white;
+      background: #fff;
       padding: 20px;
+      margin: auto;
+      max-width: 400px;
       border-radius: 10px;
-      box-shadow: 0 0 10px #bbb;
-      text-align: right;
-      direction: rtl;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    form label {
-      display: block;
-      margin: 10px 0 5px;
-      font-weight: bold;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 8px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      font-size: 14px;
-    }
-    form button {
-      margin-top: 15px;
+    input, textarea {
       width: 100%;
       padding: 10px;
-      font-size: 16px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    button {
       background-color: #02a95c;
       color: white;
+      padding: 10px 20px;
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      font-size: 16px;
     }
-    form button:hover {
-      background-color: #028a4b;
-    }
-    .comments-section {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: right;
-      direction: rtl;
-      background: white;
-      padding: 15px 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #bbb;
-    }
-    .comment {
-      border-bottom: 1px solid #ddd;
-      padding: 10px 0;
-    }
-    .comment:last-child {
-      border-bottom: none;
-    }
-    .comment strong {
-      color: #02a95c;
+    .note {
+      font-size: 13px;
+      color: #888;
+      margin-top: -10px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Help Khaled Reunite with His Family</h1>
-  <a class="donate-button" href="https://gofund.me/321e3212" target="_blank" rel="noopener noreferrer">Donate on GoFundMe</a>
-  <a class="donate-button" href="https://spot.fund/khaled" target="_blank" rel="noopener noreferrer">Donate on Spotfund</a>
-</header>
+  <h2>Send a Private Message</h2>
 
-<section>
-  <img src="https://i.ibb.co/3yVFdWB6/1d20f667-d2db-4caf-b466-1a91617dff8b.jpg" alt="Khaled and his family" />
-  <p>
-    Daily pressures are increasing, and the hope of reunion is fading because of the destruction and loss we face every day.
-    We say goodbye to many loved ones. Bombing and killing continue under daily genocide and starvation.
-    If one survives the bombs, they die from hunger. I don't know if I will see my children and wife again.
-    And even if I do… how will that reunion be? No one can truly feel our pain. It is suffering beyond imagination.
+  <p class="note">
+    ملاحظة: لن يظهر تعليقك في الصفحة، سيتم إرساله مباشرة إلى بريدي الخاص 📩<br>
+    <em>Note: Your message will NOT appear publicly. It will go directly to my email.</em>
   </p>
-  <img src="https://i.ibb.co/3Y1f4Pj6/ebbbc2d8-1a12-412b-81ab-adecf73be6b4.jpg" alt="Devastation in Gaza" />
-  <a class="donate-button" href="https://gofund.me/321e3212" target="_blank" rel="noopener noreferrer">Donate on GoFundMe</a>
-  <a class="donate-button" href="https://spot.fund/khaled" target="_blank" rel="noopener noreferrer">Donate on Spotfund</a>
-</section>
 
-<section>
-  <form id="commentForm">
-    <h2>اترك تعليقك</h2>
-    <label for="username">اسم المستخدم:</label>
-    <input type="text" id="username" name="username" required placeholder="ادخل اسم المستخدم">
-
-    <label for="comment">تعليقك:</label>
-    <textarea id="comment" name="comment" rows="4" required placeholder="اكتب تعليقك هنا"></textarea>
-
-    <button type="submit">إرسال التعليق</button>
+  <form action="https://formspree.io/f/mkgbywed" method="POST">
+    <input type="text" name="name" placeholder="Your name / اسمك" required>
+    <textarea name="message" placeholder="Write your message here... / اكتب رسالتك هنا" rows="5" required></textarea>
+    <button type="submit">Send Message / أرسل الرسالة</button>
   </form>
-</section>
-
-<section class="comments-section" id="commentsSection">
-  <h2>تعليقات الزوار</h2>
-  <!-- التعليقات ستظهر هنا -->
-  <div class="comment"><strong>فاطمة من ألمانيا:</strong> قلوبنا معك يا خالد، تبرعت وسأشارك الرابط مع أصدقائي 💔🇵🇸</div>
-  <div class="comment"><strong>نور الأمل:</strong> ما تمرّ به يفوق الوصف… تبرعت اليوم لعلك ترى أطفالك قريبًا 🙏</div>
-  <div class="comment"><strong>محمد المغترب:</strong> وصلتني الحملة عبر صديق… تم التبرع، والله يعينك ويرزقك لقاء الأحباب 🌹</div>
-  <div class="comment"><strong>SARA 🇨🇦:</strong> الدعم بسيط ولكن مع الدعاء… ربنا يجمع شملك عاجلًا 💕</div>
-  <div class="comment"><strong>سامي من نابلس:</strong> أقسم بالله تأثرت بكلامك… تم النشر في كل مجموعاتي، اصبر والله معك 🤲</div>
-</section>
-
-<footer>
-  <a class="donate-button" href="https://gofund.me/321e3212" target="_blank" rel="noopener noreferrer">Donate on GoFundMe</a>
-  <a class="donate-button" href="https://spot.fund/khaled" target="_blank" rel="noopener noreferrer">Donate on Spotfund</a>
-  <div class="whatsapp">
-    Contact me on WhatsApp: <a href="https://wa.me/972597101194" target="_blank" rel="noopener noreferrer">00972597101194</a>
-  </div>
-</footer>
-
-<script>
-  const form = document.getElementById('commentForm');
-  const commentsSection = document.getElementById('commentsSection');
-
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const username = form.username.value.trim();
-    const comment = form.comment.value.trim();
-
-    if (!username || !comment) {
-      alert('يرجى إدخال اسم المستخدم والتعليق');
-      return;
-    }
-
-    // إنشاء عنصر تعليق جديد
-    const newComment = document.createElement('div');
-    newComment.classList.add('comment');
-    newComment.innerHTML = `<strong>${escapeHtml(username)}:</strong> ${escapeHtml(comment)}`;
-
-    // إضافة التعليق إلى القسم
-    commentsSection.appendChild(newComment);
-
-    // إعادة تعيين النموذج
-    form.reset();
-  });
-
-  // دالة بسيطة لمنع إدخال HTML خبيث في التعليقات
-  function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-  }
-</script>
 
 </body>
 </html>
