@@ -5,14 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Help Khaled Reunite with His Family</title>
 
-  <!-- Meta tags -->
+  <!-- Meta tags for social sharing -->
   <meta name="description" content="I'm Khaled, a father of five children. We were separated during the war. My family is in Egypt, and I'm trapped in Gaza. Please help me reunite with them and build a new life." />
   <meta property="og:title" content="Help Khaled Reunite with His Family" />
-  <meta property="og:description" content="I'm Khaled, a father of five children. We were separated during the war. My family is in Egypt, and I'm trapped in Gaza. Please help me reunite with them and build a new life." />
+  <meta property="og:description" content="I'm Khaled, a father of five children. Separated by war, I'm trapped in Gaza while my family is in Egypt. Please help me bring them back together." />
+  <meta property="og:image" content="https://i.ibb.co/qLhpQ0SS/3f7c35c41e717404eed11ae9f850728a.jpg" />
   <meta property="og:url" content="https://goo-show.github.io/all/" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Help Khaled Reunite with His Family" />
-  <meta name="twitter:description" content="I'm Khaled, a father of five children. We were separated during the war. My family is in Egypt, and I'm trapped in Gaza. Please help me reunite with them and build a new life." />
+  <meta name="twitter:description" content="Separated by war, Khaled is a father of five struggling to reunite with his family. Every bit of help brings hope." />
+  <meta name="twitter:image" content="https://i.ibb.co/qLhpQ0SS/3f7c35c41e717404eed11ae9f850728a.jpg" />
 
   <style>
     body {
@@ -93,28 +97,23 @@
   <a class="donate-button" href="https://gofund.me/321e3212" target="_blank">Donate on GoFundMe</a>
   <a class="donate-button" href="https://spot.fund/khaled" target="_blank">Donate on Spotfund</a>
 
-  <img data-src="https://i.ibb.co/3yVFdWB6/1d20f667-d2db-4caf-b466-1a91617dff8b.jpg" alt="Khaled and family" id="img1" />
+  <img src="https://i.ibb.co/qLhpQ0SS/3f7c35c41e717404eed11ae9f850728a.jpg" alt="Khaled and family - 1" />
 
   <p>
-    Every day, life becomes more unbearable. Bombs fall endlessly, and hunger shows no mercy.<br><br>
-    My name is Khaled, and I’m a father of five beautiful children. When the war began, I had no choice but to send my family to Egypt for safety. I stayed behind in Gaza — alone, jobless, homeless, and trapped.<br><br>
-    My children ask about me every day. I miss them with every beat of my heart. I don’t know if I will ever see them again, but I cling to hope.<br><br>
-    We are enduring unimaginable suffering — destroyed homes, empty stores, no clean water, and very little food. Those who survive the bombs still face death from starvation or despair.<br><br>
-    My dream is simple: to be reunited with my children, to start a new life where they can be safe and smile again.<br><br>
-    I am asking for your help not just for myself, but for my children. I want to feel like a father again — to provide for them, to protect them, to give them a future.<br><br>
-    Please don’t leave us behind. Your support means everything. Every donation is a step closer to life.<br><br>
-    If you’d like to reach out or send a message, you can contact me using the form or WhatsApp number below. Your presence gives us strength. Thank you from the bottom of my heart.
+    My name is Khaled, a father of five children. We were torn apart by war. My family is now in Egypt seeking safety, and I was left behind in Gaza. I have no job, no source of income, and every day is a struggle.<br><br>
+    The pain of separation is unbearable. I want to be a father who can provide for his children again. Please, don’t leave us alone. Anyone who wishes to send a message or get in touch can find contact details below.<br><br>
+    Repeated posts might appear because my account was restricted, and I'm trying to keep our cause visible. I apologize for the inconvenience, but we are fighting for our survival. Please don’t be bothered by the alerts — with love and gratitude to everyone who supported us in this difficult time.
   </p>
 
-  <img data-src="https://i.ibb.co/3Y1f4Pj6/ebbbc2d8-1a12-412b-81ab-adecf73be6b4.jpg" alt="Gaza destruction" id="img2" />
+  <img src="https://i.ibb.co/ynFFnBbm/6b5bddd5c6e043ce40e6a3ad64eca5d6.jpg" alt="Children of Khaled" />
 
   <a class="donate-button" href="https://gofund.me/321e3212" target="_blank">Donate on GoFundMe</a>
   <a class="donate-button" href="https://spot.fund/khaled" target="_blank">Donate on Spotfund</a>
 
   <form id="commentForm">
-    <div class="note">💌 Send a message of hope or support to Khaled. Your message will not be public.</div>
+    <div class="note">💌 Send a message of hope or love to Khaled. Your message will not be public.</div>
     <input type="text" id="name" placeholder="Your name" required />
-    <textarea id="message" placeholder="Your message..." rows="4" required></textarea>
+    <textarea id="message" placeholder="Your message" rows="4" required></textarea>
     <button type="submit">💌 Send your message</button>
   </form>
 
@@ -124,21 +123,8 @@
     </a>
   </div>
 
-  <div class="note" style="margin-top: 40px; font-size: 13px; color: #777;">
-    Note: If you see this page more than once, please understand. My accounts often get suspended, and I must repost through different ways to survive.<br>
-    I’m doing my best to raise awareness and stay connected — not to annoy you.<br>
-    Please don’t be upset by the phone notifications. This is our only way to fight for survival.<br><br>
-    With love and gratitude to everyone who has helped us in this dark time. 🌿
-  </div>
-
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const img1 = document.getElementById('img1');
-      const img2 = document.getElementById('img2');
-      if (img1) img1.setAttribute('src', img1.getAttribute('data-src'));
-      if (img2) img2.setAttribute('src', img2.getAttribute('data-src'));
-    });
-
+    // Handle message form submission
     document.getElementById('commentForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
